@@ -1,26 +1,3 @@
-<div class="notebook">
-
-<div class="nb-cell markdown" name="md1">
-This notebook uses the student profile
-</div>
-
-<div class="nb-cell program" data-background="true" name="p3">
-
-</div>
-
-<div class="nb-cell markdown" name="md4">
-
-</div>
-
-<div class="nb-cell markdown" name="md3">
-
-</div>
-
-<div class="nb-cell markdown" name="md2">
-
-</div>
-
-<div class="nb-cell program" name="p1">
 /* Facts */
 male(jack).
 male(oliver).
@@ -92,18 +69,3 @@ older_sibling_of(X,Y):- sibling_of(X,Y), male(X), parent_of(P,X), parent_of(P,Y)
 
 /* Regla para determinar si X es hermano (o hermana) menor de Y */
 younger_sibling_of(X,Y):- sibling_of(X,Y), male(Y), parent_of(P,X), parent_of(P,Y), X \= Y.
-
-</div>
-
-<div class="nb-cell query" name="q1">
-
-</div>
-
-<div class="nb-cell program" data-background="true" data-singleline="true" name="p2">
-% Student exercise profile
-:- set_prolog_flag(occurs_check, error).		% disallow cyclic terms
-:- set_prolog_stack(global, limit(8 000 000)).  % limit term space (8Mb)
-:- set_prolog_stack(local,  limit(2 000 000)).  % limit environment space
-</div>
-
-</div>
